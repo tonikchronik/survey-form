@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title">Заявка на кредит</h1>
+        <p id="description">Анкета на ипотеку и получение ипотечного кредита</p>
+      </header>
+      <form id="survey-form">
+        <div class="item-form">
+          <label id="name-label" for="name">Фамилия, Имя, Отчество</label>
+          <input class="fill-form" type="text" name="name" id="name" placeholder="Ваше ФИО полностью" required />
+        </div>
+
+        <div class="item-form">
+          <label for="email" id="email-label">Ваша элетронная почта</label>
+          <input class="fill-form" type="email" name="email" id="email" placeholder="example@mail.com" required />
+        </div>
+
+        <div class="item-form">
+          <label for="number" id="number-label">Ваш возраст</label>
+          <input class="fill-form" type="number" name="number" id="number" placeholder="Введите Ваш возраст" min="18" max="80" required />
+        </div>
+
+        <div class="item-form">
+          <label for="dropdown">Цель кредита</label>
+          <select id="dropdown" name="mortgage-type" class="mortgage-item">
+            <option value="">Выберите из списка</option>
+            <option value="1">С господдержкой</option>
+            <option value="2">Семейная</option>
+            <option value="3">Маткапитал</option>
+            <option value="4">Военная</option>
+            <option value="5">Дальневосточная</option>
+            <option value="6">Для IT-специалистов</option>
+            <option value="7">Другое</option>
+          </select>
+        </div>
+
+        <div class="item-form">
+          <p>Ваша сфера деятельности</p>
+          <label><input type="checkbox" name="job" value="Недвижимость" />Недвижимость</label>
+          <label><input type="checkbox" name="job" value="Медицина" />Медицина</label>
+          <label><input type="checkbox" name="job" value="Образование" />Образование</label>
+          <label><input type="checkbox" name="job" value="Сфера обслуживания" />Сфера обслуживания</label>
+          <label><input type="checkbox" name="job" value="Другое" />Другое</label>
+        </div>
+        <textarea name="job" class="input-textarea" placeholder="Напишите свой вариант" cols="55" rows="10"></textarea>
+
+        <div class="item-form">
+          <p>Как часто вы готовы вносить платежи?</p>
+          <label><input type="radio" name="frequency" value="1 раз в неделю" />1 раз в неделю</label>
+          <label><input type="radio" name="frequency" value="1 раз в месяц" />1 раз в месяц</label>
+          <label><input type="radio" name="frequency" value="1 раз в 3 месяца" />1 раз в 3 месяца</label>
+        </div>
+        <div class="item-form">
+          <button id="submit" type="submit" class="button">отправить</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
